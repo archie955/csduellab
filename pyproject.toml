@@ -11,11 +11,15 @@ license = "MIT"
 license-files = ["LICENSE"]
 
 dependencies = [
+    "awpy>=2.0.2",
     "polars>=1.43.0",
 ]
 
 [dependency-groups]
 dev = [
+    "ipykernel>=7.3.0",
+    "numpy>=2.5.1",
+    "optuna>=4.9.0",
     "ruff>=0.15.22",
     "scikit-learn>=1.9.0",
     "ty>=0.0.62",

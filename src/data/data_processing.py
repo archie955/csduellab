@@ -27,7 +27,8 @@ def vel_angle(x, y):
 def vert_ang_dist(distance, z1, z2):
     if distance == 0.0:
         print(
-            f"Distance is 0 in vertical angle distance!!!. Z1 and Z2 are {z1} and {z2} respectively."
+            f"Distance is 0 in vertical angle distance!!!."\
+            f"Z1 and Z2 are {z1} and {z2} respectively."
         )
         return math.degrees(math.asin((z2 - z1) / 0.00001))
     angle = math.degrees(math.asin((z2 - z1) / distance))
@@ -326,7 +327,9 @@ def test_main():
             and damage["victimName"] in players
         ):
             print(
-                f"Duel between attacker {damage['attackerName']} and victim {damage['victimName']} starts at {damage['seconds']} seconds"
+                f"Duel between attacker {damage['attackerName']}"\
+                f"and victim {damage['victimName']} starts at"\
+                f"{damage['seconds']} seconds"
             )
             damage_time = damage["seconds"]
             break

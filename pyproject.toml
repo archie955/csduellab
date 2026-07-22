@@ -1,7 +1,72 @@
 [project]
-name = "csduellab"
+name = "csduellab_archie955"
 version = "0.1.0"
-description = "Add your description here"
+authors = [
+    { name="Archie Smedley", email="archiesmedley604@gmail.com" },
+]
+description = "Python Package to analyse duels in Counter Strike"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+license = "MIT"
+license-files = ["LICENSE"]
+
+dependencies = [
+    "polars>=1.43.0",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.15.22",
+    "scikit-learn>=1.9.0",
+    "ty>=0.0.62",
+    "xgboost>=3.3.0",
+]
+
+
+[tool.ruff]
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".ipynb_checkpoints",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pyenv",
+    ".pytest_cache",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    ".vscode",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "site-packages",
+    "tavenv",
+]
+line-length = 88
+indent-width = 4
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["B008", "B904"]
+fixable = ["ALL"]
+unfixable = []
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+docstring-code-format = false
+docstring-code-line-length = "dynamic"
